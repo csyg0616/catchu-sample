@@ -12,3 +12,6 @@ class TodoList:
 
     def remaining(self):
         return sum(1 for item in self.items if not item["done"])
+
+    def clear_done(self):
+        self.items = [item for item in self.items if not item["done"]]
