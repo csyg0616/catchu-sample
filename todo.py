@@ -9,3 +9,6 @@ class TodoList:
 
     def complete(self, index):
         self.items[index]["done"] = True
+
+    def remaining(self):
+        return sum(1 for item in self.items if not item["done"])
